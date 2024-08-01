@@ -25,6 +25,20 @@ $data = json_decode($json, true);
         <button class="btn btn-primary">
           <i class="fa fa-sign-in"></i> Login</button>
       </div>
+      <div>
+        <button class="btn btn-primary">
+          <i class="fa fa-bell"></i>Notification</button>
+      </div>
+      <div>
+        <button class="btn btn-primary">
+         <i class="fa fa-sign-in" aria-hidden="true"></i>
+
+      </div>
+      <div>
+        <button class="btn btn-primary">
+        <i class="fa fa-check" aria-hidden="true"></i>
+
+      </div>
     </div>
     <table class="table table-dark">
       <thead>
@@ -51,7 +65,9 @@ $data = json_decode($json, true);
             <td><?php echo $element ["profile"]["weight"]?></td>
             <td><?php echo $element ["profile"]["height"]?></td>
            
-            <td><button?></button>
+            <!-- <td><button?></button> -->
+            <td><button type="button" class="btn btn-info">Collect</button> </td>
+
          </tr>
          <?php endforeach; ?>
       </tbody>
