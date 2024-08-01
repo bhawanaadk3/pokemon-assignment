@@ -1,3 +1,9 @@
+<?php
+$json = file_get_contents("./data.json");
+$data = json_decode($json, true);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,6 +41,19 @@
       <tbody>
 
         <!-- Write your code here -->
+        
+         <?php foreach($data as $element): ?>
+          <tr>
+            <td><img src="<?php echo $element ["image"]["thumbnail"]?>"></td>
+            <td><?php echo $element ["name"]["english"]?></td>
+            <td><?php echo strtoupper ($element["species"])?></td>
+            <td><?php echo $element ["description"]?></td>
+            <td><?php echo $element ["profile"]["weight"]?></td>
+            <td><?php echo $element ["profile"]["height"]?></td>
+           
+            <td><button?></button>
+         </tr>
+         <?php endforeach; ?>
       </tbody>
     </table>
 
